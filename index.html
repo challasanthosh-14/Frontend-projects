@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>job application</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #b5adad;
+        color: #333;
+        margin: 20px;
+      }
+
+      form {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        background-color: #ffffff;
+      }
+      legend {
+        font-weight: bold;
+        padding: 0 10px;
+      }
+      fieldset {
+        border: 2px solid #ccc;
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+
+      button {
+        padding: 10px 20px;
+        margin: 5px;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #2e8b57;
+        color: white;
+        transition: background 0.3s ease;
+      }
+
+      input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        border: 2px solid #444;
+        border-radius: 4px;
+        margin-right: 5px;
+        position: relative;
+      }
+
+      input[type="checkbox"]:checked {
+        background-color: #2e8b57;
+        border-color: #2e8b57;
+      }
+      @keyframes blink {
+        0% {
+          outline: 2px solid rgb(121, 142, 244);
+        }
+        50% {
+          outline: 2px solid yellow;
+        }
+        100% {
+          outline: 2px solid rgb(241, 99, 170);
+        }
+      }
+
+      input[type="radio"]:checked {
+        animation: blink 2s infinite;
+        transform: scale(1.1);
+      }
+
+      input[type="radio"] {
+        accent-color: #446ae7;
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="https://thetapacademy.com/" autocomplete="">
+      <center><h1>Job Application Form</h1></center>
+      <fieldset>
+        <legend>Personal Information</legend>
+        <table>
+          <tr>
+            <td>First Name*</td>
+            <td><input type="text" name="first name" required /></td>
+          </tr>
+          <tr>
+            <td>Last Name*</td>
+            <td><input type="text" name="last name" required /></td>
+          </tr>
+
+          <tr>
+            <td>Date of Birth</td>
+            <td><input type="date" name="dob" /></td>
+          </tr>
+          <tr>
+            <td>Gender</td>
+            <td>
+              <input type="radio" name="gender" value="male" />Male
+              <input type="radio" name="gender" value="female" />Female
+              <input type="radio" name="gender" value="other" />Other
+            </td>
+          </tr>
+          <tr>
+            <td><label>Profile Picture*</label></td>
+            <td><input type="file" name="pp" /></td>
+          </tr>
+        </table>
+      </fieldset>
+      <fieldset>
+        <legend>Contact Information</legend>
+        <table>
+          <tr>
+            <td><label>Email* </label></td>
+            <td><input type="text" required name="email" /></td>
+          </tr>
+
+          <tr>
+            <td><label>Phone number*</label></td>
+
+            <td>
+              <input
+                type="text"
+                required
+                id="ph_no"
+                pattern="[6-9]{1}[0-9]{9}"
+                placeholder="10 digit number"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td><textarea name="address" rows="3" cols="30"></textarea></td>
+          </tr>
+          <tr>
+            <td>Country</td>
+            <td>
+              <select name="country">
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="Australia">Australia</option>
+                <option value="London">London</option>
+                <option value="France">France</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <fieldset>
+        <legend>Education Background</legend>
+        <table>
+          <tr>
+            <td>Highest Qualification</td>
+            <td>
+              <select name="qualification">
+                <option>Graduate</option>
+                <option>Post-Graduate</option>
+                <option>PhD</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Specialization</td>
+            <td>
+              <select name="specialization">
+                <option>CSE</option>
+                <option>Data Science</option>
+                <option>AIML</option>
+                <option>AI</option>
+                <option>EEE</option>
+                <option>ECE</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Year of Graduation</td>
+            <td>
+              <select name="Year of Graduation">
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+                <option>2023</option>
+                <option>2024</option>
+                <option>2025</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <fieldset>
+        <legend>Job Preferences</legend>
+        <table>
+          <tr>
+            <td><label for="preferredRole">Preferred Role</label></td>
+            <td>
+              <input
+                type="text"
+                id="preferredRole"
+                name="preferredRole"
+                required
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="salary">Expected Salary</label></td>
+            <td><input type="text" id="salary" name="salary" required /></td>
+          </tr>
+
+          <tr>
+            <td><label>Preferred Locations</label></td>
+            <td>
+              <input
+                type="checkbox"
+                id="bangalore"
+                name="preferredLocations"
+                value="Bangalore"
+              />
+              <label for="bangalore">Bangalore</label>
+
+              <input
+                type="checkbox"
+                id="delhi"
+                name="preferredLocations"
+                value="Delhi"
+              />
+              <label for="delhi">Delhi</label>
+
+              <input
+                type="checkbox"
+                id="remote"
+                name="preferredLocations"
+                value="Remote"
+              />
+              <label for="remote">Remote</label>
+
+              <input
+                type="checkbox"
+                id="pune"
+                name="preferredLocations"
+                value="Pune"
+              />
+              <label for="pune">Pune</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="relocate">Willing to Relocate?</label></td>
+            <td>
+              <input type="checkbox" id="relocate" name="relocate" required />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <fieldset>
+        <legend>Create Account</legend>
+        <table>
+          <tr>
+            <td><label for="password">Password*</label></td>
+            <td>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                pattern=".{6,}"
+                placeholder="Minimum 6 characters"
+                minlength="6"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="cpassword">Confirm Password*</label></td>
+            <td>
+              <input
+                type="password"
+                id="cpassword"
+                name="confirmPassword"
+                required
+                pattern=".{6,}"
+              />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <fieldset>
+        <legend>Agreement</legend>
+
+        <label for="resume">Upload Resume (PDF only)*</label>
+        <input
+          type="file"
+          id="resume"
+          name="resume"
+          accept=".pdf"
+          required
+        /><br /><br />
+
+        <input type="checkbox" id="agreement" name="agreement" required />
+        <label for="agreement">I agree to the Terms and Conditions*</label
+        ><br /><br />
+
+        <button type="submit">Submit Application</button>
+        <button type="reset">Reset Form</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
